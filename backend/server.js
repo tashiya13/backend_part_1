@@ -1,14 +1,15 @@
 import express from "express"
 
+// const express = require('express')
 const app = express();
 
-app.get('/',(req , res) => {
-    res.send('server is ready')
-});
+// app.get('/',(req , res) => {
+//     res.send('server is ready')
+// });
 
 // list of five jokes
 
-app.get('/jokes', (req , res) => {
+app.get('/api/jokes', (req , res) => {
     const jokes = [
         {
             id:1,
@@ -18,26 +19,26 @@ app.get('/jokes', (req , res) => {
             {
 
             id:2,
-            title: 'A joke',
-            content :'this is a joke'
+            title: 'A  2 joke',
+            content :'this is a  2 joke'
             },
 
             {
             id:3,
-            title: 'A joke',
-            content :'this is a joke'
+            title: 'A  3 joke',
+            content :'this is a 3 joke'
         },
 
         {
             id:4,
-            title: 'A joke',
-            content :'this is a joke'
+            title: 'A 4 joke',
+            content :'this is a  4 joke'
         },
 
         {
             id:5,
-            title: 'A joke',
-            content :'this is a joke'
+            title: 'A  5 joke',
+            content :'this is a  5 joke'
         }
     ];
     res.send(jokes);
@@ -49,5 +50,5 @@ app.get('/jokes', (req , res) => {
 const port = process.env.PORT || 3000 ;
 
 app.listen(port , () => {
-    console.log(`server at https://localost:${port}`);
+    console.log(`server at http://localost:${port}`);
 });
